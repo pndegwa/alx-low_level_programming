@@ -1,5 +1,4 @@
 #include <unistd.h>
-#include <sys/syscall.h>
 
 /**
  * main - Entry point
@@ -8,7 +7,6 @@
  */
 int main(void)
 {
-	const char msg[] = "_putchar\n";
-	syscall(SYS_write, 1, msg, sizeof(msg));
+	write(1, "_putchar\n", 9);
 	return (0);
 }
